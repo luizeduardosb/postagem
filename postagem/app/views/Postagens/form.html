@@ -1,0 +1,42 @@
+#{extends 'main.html' /}
+#{set title:'Postagens' /}
+
+<style> 
+             
+     .container {
+     	display: flex;
+     	height: 400px;
+     	width: 400px;
+     }
+     
+     .child {
+     	width: 50px;
+     	height: 50px;
+     	margin: auto;
+     
+     }
+   
+</style>
+
+<form action="@{Postagens.salvar}">
+
+<div class="container">
+	
+	<div class="child">
+
+	Título: <input type="text" name="p.titulo" value="${p?.titulo}">
+
+	Conteúdo: <textarea name="p.conteudo" value="${p?.titulo}" placeholder="Publique aqui"></textarea>
+
+	Autor: <input type="text" name="p.autor" value="${p?.autor}">
+
+	Data: <input type="date" name="p.data" value="${p?.data}"> <br/>
+
+	<input class="btn btn-primary" type="submit" value="Submit">
+	
+	</div>
+
+</div>
+
+
+</form>
